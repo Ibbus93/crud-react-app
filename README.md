@@ -14,7 +14,6 @@ This project used the function components and the hooks associated.
 The project structure of the **src/** directory  is the following:    
 
 <img src="http://www.vectorico.com/download/office/folder-icon.png" width="20" /> src  
-
 L <img src="http://www.vectorico.com/download/office/folder-icon.png" width="20" />  components  
    &nbsp;&nbsp;L <img src="http://www.vectorico.com/download/office/folder-icon.png" width="20" />  App    
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...  
