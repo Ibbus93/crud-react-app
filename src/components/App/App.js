@@ -17,7 +17,6 @@ import {SIGN_IN} from "../../routes/paths";
 // Style sheets
 import './App.scss';
 
-
 const App = () => (
     <div className="app-container">
         <BrowserRouter>
