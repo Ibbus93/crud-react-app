@@ -3,7 +3,10 @@ import {USER_GET, USER_INVALIDATE, USER_RESPONSE} from "../../actionTypes";
 const initialState = {
     isFetching: false,
     didInvalidate: false,
-    data: null,
+    data: {
+        isLoggedIn: false,
+        userId: null
+    },
     error: null
 };
 
@@ -20,7 +23,9 @@ const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: false,
-                data: action.payload.user
+                data: {
+                    ...action.payload
+                }
             };
         case USER_INVALIDATE:
             return {

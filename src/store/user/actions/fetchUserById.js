@@ -5,9 +5,9 @@ const userGet = () => ({
     type: USER_GET
 });
 
-const userResponse = (user) => ({
+const userResponse = (data) => ({
    type: USER_RESPONSE,
-   payload: { user }
+   payload: { userId: data.id, isLoggedIn: data.logged }
 });
 
 const userInvalidate = (error) => ({
@@ -20,7 +20,6 @@ const fetchUserById = (id) => (
         dispatch(userGet());
 
         getUserById(id)
-            .then(response => response.data)
             .then(data => dispatch(userResponse(data)))
             .catch(error => dispatch(userInvalidate(error)));
     }
